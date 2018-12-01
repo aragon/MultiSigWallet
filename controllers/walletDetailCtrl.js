@@ -17,6 +17,10 @@
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "",
       }
 
+      const knownAddress = {
+        "0x5756ddfa7d643542ae3a0add8cea5ad602d59035": "Alexa Weaver",
+      }
+
       const hardCodedAddress = "0xcafe1a77e84698c83ca8931f54a755176ef75f2c"
 
       $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
@@ -246,7 +250,7 @@
               };
             case "173825d9":
               return {
-                title: "Remove owner " + $filter("addressCanBeOwner")(owner, $scope.wallet)
+                title: "Remove owner " + $filter("addressCanBeOwner")(owner, $scope.wallet))
               };
             case "cea08621":
               var limit = $filter("ether")("0x" + tx.data.slice(11));
@@ -261,13 +265,13 @@
               token.balance = new Web3().toBigNumber( "0x" + tx.data.slice(74));
               let tokenName = $filter("token")(token)
               return {
-                title: "Transfer " + tokenName.replace('undefined', 'ANT') + " to " + $filter("addressCanBeOwner")(account, $scope.wallet)
+                title: "Transfer " + tokenName.replace('undefined', 'ANT') + " to " + $filter("addressCanBeOwner")(account, $scope.wallet))
               };
             case "e20056e6":
               var oldOwner = "0x" + tx.data.slice(34, 74);
               var newOwner = "0x" + tx.data.slice(98, 138);
               return {
-                title: "Replace owner " + $filter("addressCanBeOwner")(oldOwner, $scope.wallet) + " with " + $filter("addressCanBeOwner")(newOwner, $scope.wallet)
+                title: "Replace owner " + $filter("addressCanBeOwner")(oldOwner, $scope.wallet)) + " with " + $filter("addressCanBeOwner")(newOwner, $scope.wallet))
               };
             default:
               // Check abis in cache
@@ -299,7 +303,7 @@
         }
         else {
           return {
-            title: "Transfer " + $filter("ether")(tx.value) + " to " + $filter("addressCanBeOwner")(tx.to, $scope.wallet)
+            title: "Transfer " + $filter("ether")(tx.value) + " to " + $filter("addressCanBeOwner")(tx.to, $scope.wallet))
           };
         }
       };

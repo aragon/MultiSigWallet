@@ -74,6 +74,14 @@
               {{token|token}} {{token.balanceUSD|fiat}}
             </td>
           </tr>
+          <tr ng-repeat="token in wallet.tokens track by $index">
+            <td>
+              Euro
+            </td>
+            <td class="text-right">
+              1,500,000 ($1,697,629.50)
+            </td>
+          </tr>
         </tbody>
       </table>
       <div ng-show="!totalTokens" class="panel-body text-center" uib-collapse="hideTokens">
@@ -114,7 +122,7 @@
       Multisig transactions
     </h4>
   </div>
-  <div class="table-responsive">
+  <div class="table-responsive transaction-table">
   <table class="table table-bordered table-tx">
     <thead>
       <tr>
@@ -180,10 +188,10 @@
           </ul>
           </div>
         </td>
-        <td>
+        <td class="confirmation-list">
           <div class="row">
             <div ng-class="{'col-md-12' : transactions[txId].executed, 'col-md-6' : !transactions[txId].executed}">
-              <ul ng-repeat="owner in transactions[txId].confirmations">
+              <ul  ng-repeat="owner in transactions[txId].confirmations">
                 <li>
                   {{wallet.owners[owner].name}}
                 </li>
