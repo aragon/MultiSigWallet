@@ -2,8 +2,9 @@ body {
   /*background: #fafafa !important;*/
   color: #505050;
   font-weight: normal;
+  font-size: 15px;
   background-color: white;
-  font-family: 'Maison Neue', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+  font-family: 'HKGrotesk-Regular', 'Maison Neue', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
 }
 
 .navbar-default {
@@ -68,10 +69,6 @@ body {
   border-color: #e8e8e8;
   background-color: #f9fafc!important;
   color: #3b3b3b;
-}
-
-.navbar > .container {
-  margin-top: 3px;
 }
 
 .navbar {
@@ -293,4 +290,32 @@ table.table-tx tbody tr td {
     grid-column-start: 1 !important;
     grid-column-end: 4 !important;
   }
+}
+
+.secondary-navbar {
+  background-color: #26272f;
+  border: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.secondary-navbar .navbar-text {
+  font-weight: bold;
+  margin: 0;
+  font-size: 17px;
+}
+
+.secondary-navbar .divider {
+  padding: 0 10px;
+}
+.secondary-navbar a {
+  color: #01c3e3;
+  text-decoration: none;
+  outline: none;
+}
+
+.secondary-navbar a:hover {
+  color: #039eb7;
+  text-decoration: none;
 }
