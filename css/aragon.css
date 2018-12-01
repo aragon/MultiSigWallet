@@ -216,6 +216,9 @@ table.table-tx tbody tr td {
   padding: 0 20px;
   z-index: 5;
 }
+.aragon-navbar ul {
+  padding: 0;
+}
 .aragon-navbar .brand {
   display: flex;
 }
