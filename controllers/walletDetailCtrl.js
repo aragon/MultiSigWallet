@@ -12,8 +12,8 @@
       }
 
       const hardcodedTagline = {
-        "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": ", Cofounder & Tech Lead",
-        "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": ", Cofounder & Project Lead",
+        "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": ", Board Member",
+        "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": ", Board Member",
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "",
       }
 
