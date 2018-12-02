@@ -175,7 +175,7 @@
         }
         else if (addressCandidate && addressCandidate.indexOf && addressCandidate.indexOf("0x") != -1) {
           if (addressCandidate == '0x5756ddfa7d643542ae3a0add8cea5ad602d59035') {
-            return 'Alexa Weaver';
+            return 'Operations wallet';
           } else {
             for (key in Wallet.wallets) {
               var wallet = Wallet.wallets[key];

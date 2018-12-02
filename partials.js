@@ -310,7 +310,39 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "              Euro\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              1,500,000 ($1,697,629.50)\n" +
+    "              {{euro}} EUR\n" +
+    "            </td>\n" +
+    "          </tr>\n" +
+    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "            <td>\n" +
+    "              Zcash\n" +
+    "            </td>\n" +
+    "            <td class=\"text-right\">\n" +
+    "              {{zec}} ZEC\n" +
+    "            </td>\n" +
+    "          </tr>\n" +
+    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "            <td>\n" +
+    "              Bitcoin\n" +
+    "            </td>\n" +
+    "            <td class=\"text-right\">\n" +
+    "              {{btc}} BTC\n" +
+    "            </td>\n" +
+    "          </tr>\n" +
+    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "            <td>\n" +
+    "              Decred\n" +
+    "            </td>\n" +
+    "            <td class=\"text-right\">\n" +
+    "              {{dcr}} DCR\n" +
+    "            </td>\n" +
+    "          </tr>\n" +
+    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "            <td>\n" +
+    "              Dai\n" +
+    "            </td>\n" +
+    "            <td class=\"text-right\">\n" +
+    "              {{dai}} DAI\n" +
     "            </td>\n" +
     "          </tr>\n" +
     "        </tbody>\n" +

@@ -307,6 +307,7 @@ table.table-tx tbody tr td {
   font-weight: bold;
   margin: 0;
   font-size: 17px;
+  padding-left: 2px;
 }
 
 .secondary-navbar .divider {

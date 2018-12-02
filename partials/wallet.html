@@ -79,7 +79,39 @@
               Euro
             </td>
             <td class="text-right">
-              1,500,000 ($1,697,629.50)
+              {{euro}} EUR
+            </td>
+          </tr>
+          <tr ng-repeat="token in wallet.tokens track by $index">
+            <td>
+              Zcash
+            </td>
+            <td class="text-right">
+              {{zec}} ZEC
+            </td>
+          </tr>
+          <tr ng-repeat="token in wallet.tokens track by $index">
+            <td>
+              Bitcoin
+            </td>
+            <td class="text-right">
+              {{btc}} BTC
+            </td>
+          </tr>
+          <tr ng-repeat="token in wallet.tokens track by $index">
+            <td>
+              Decred
+            </td>
+            <td class="text-right">
+              {{dcr}} DCR
+            </td>
+          </tr>
+          <tr ng-repeat="token in wallet.tokens track by $index">
+            <td>
+              Dai
+            </td>
+            <td class="text-right">
+              {{dai}} DAI
             </td>
           </tr>
         </tbody>
