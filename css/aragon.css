@@ -20,7 +20,6 @@ body {
   background-color: rgb(249, 250, 252);
   border: 0 solid transparent;
   padding: 10px;
-  /*box-shadow: 0 4px 10px rgba(59, 59, 59, 0.25);*/
 }
 
 .panel-default > .panel-heading {

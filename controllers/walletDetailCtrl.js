@@ -47,7 +47,6 @@
           });
 
           $scope.wallet = copyObject;
-          console.log(copyObject);
           $scope.totalTokens = Object.keys($scope.wallet.tokens).length;
         }
       );
@@ -208,12 +207,10 @@
 
       // Euro balance
       $scope.euro = '1,500,000.00';
-
       // Dai balance
       $scope.dai = '1,000,000.00';
       // Decred balance
       $scope.dcr = '14,500.00';
-
       // ZCash balance
       fetch('https://api.zcha.in/v2/mainnet/accounts/t1TGWTiEHmYLBEMDeBpGbYTvW34SgQz1sVK')
         .then(function(res) {
@@ -221,9 +218,7 @@
               var num = parseFloat(data.balance);
               $scope.zec = num.toFixed(2);
             })
-
         })
-
         // Bitcoin balance
         fetch('https://api.blockcypher.com/v1/btc/main/addrs/3B5eJnUXRa1w6X8giMwpd6XJKnHAVmeH2j')
           .then(function(res) {
@@ -231,10 +226,7 @@
                 var num = parseFloat(data.balance)/100000000;
                 $scope.btc = num.toFixed(2);
               })
-
           })
-
-
 
       Wallet
       .webInitialized
