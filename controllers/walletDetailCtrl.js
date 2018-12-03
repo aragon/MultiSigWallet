@@ -17,10 +17,6 @@
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "",
       }
 
-      const knownAddress = {
-        "0x5756ddfa7d643542ae3a0add8cea5ad602d59035": "Alexa Weaver",
-      }
-
       const hardCodedAddress = "0xcafe1a77e84698c83ca8931f54a755176ef75f2c"
 
       $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
