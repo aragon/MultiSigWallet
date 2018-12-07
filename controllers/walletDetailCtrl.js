@@ -6,14 +6,14 @@
       $scope.wallet = {};
 
       const hardcodedOwners = {
-        "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": "Jorge Izquierdo",
-        "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": "Luis Cuende",
+        "0xf0a5486944d315e05dd24a3c106b95d12a105650": "Jorge Izquierdo",
+        "0x370528520edf34361e205bb51b4f024bd0da1352": "Luis Cuende",
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "Community Multisig",
       }
 
       const hardcodedTagline = {
-        "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": ", Board Member",
-        "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": ", Board Member",
+        "0xf0a5486944d315e05dd24a3c106b95d12a105650": ", Board Member",
+        "0x370528520edf34361e205bb51b4f024bd0da1352": ", Board Member",
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "",
       }
 
