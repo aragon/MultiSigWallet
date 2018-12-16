@@ -4,7 +4,7 @@
 			"id": 198,
 			"desc": "Move OMG for safekeeping",
 			"multisigTx": "0x187505f5c7da506dd950fc7b0b4e082fac5c12f2b7519ddfc8faf4fe082dc4a4",
-			"entities": []
+			"entities": [{}]
 		},
 		{
 			"id": 197,
@@ -21,7 +21,7 @@
 			"multisigTx": "0xba57ec271af7c0ae22673bcfeaa69eb321a8dedd0dcb8a13f6ad6ded8066c387",
 			"entities": [{"name": "1 DAI created",
 					"tx": "0xd1ddce20c3aebdaa5eff24e0ae42689fcfe843581089f5490c5ac3f60200c930"
-			},
+			}
 				
 				]
 		},
@@ -32,31 +32,31 @@
 			"entities": [{
 					"name": "Sent to Kraken for Diversification",
 					"tx": "0xe7271919cbdfcb9073b3cb05e51e3799a7981842ba9dc4167da07761eda8fd52"
-			},]
+			}]
 		},
 		{
 			"id": 194,
 			"desc": "Voting App, AGP-1 (governance.aragonproject.eth)",
-			"multisigTx": " ",
-			"entities": []
+			"multisigTx": "",
+			"entities": [{}]
 		},
 		{
 			"id": 193,
 			"desc": "ENS Public Resolver",
-			"multisigTx": " ",
-			"entities": []
+			"multisigTx": "",
+			"entities": [{}]
 		},
 		{
 			"id": 192,
 			"desc": "ENS-EthNameService",
-			"multisigTx": " ",
-			"entities": []
+			"multisigTx": "",
+			"entities": [{}]
 		},
 		{
 			"id": 191,
 			"desc": "ENS-EthNameService",
 			"multisigTx": "0x1127438fd9c3658e972cc3987bded32a985e78cfd9f244f22cd94092525d8c61",
-			"entities": []
+			"entities": [{}]
 		},
 		{
 			"id": 190,
@@ -79,7 +79,7 @@
 			{
 					"name": "RCD October Extra Services (ANT)",
 					"tx": "0x18bb1f1f3ed61e82455769d70b3cc4ed3481253e93b9275520a70e013888149e"
-			}
+			},
 			{
 					"name": "Bounties: Ara-Dream DAO Party DevConIV and Community",
 					"tx": "0x1f88dd65bd4e0e5b3493f881209452a4091a38eaa3fc7bb3fa85d4df7275c07c"
@@ -266,19 +266,19 @@
 			"id": 188,
 			"desc": "ENS-EthNameService",
 			"multisigTx": " ",
-			"entities": []
+			"entities": [{}]
 		},
 		{
 			"id": 187,
 			"desc": "ENS-EthNameService",
-			"multisigTx": " ",
-			"entities": []
+			"multisigTx": "",
+			"entities": [{}]
 		},
 		{
 			"id": 186,
 			"desc": "ENS Register",
-			"multisigTx": " ",
-			"entities": []
+			"multisigTx": "",
+			"entities": [{}]
 		},
 		{
 			"id": 185,
@@ -369,7 +369,7 @@
 		{
 			"id": 183,
 			"desc": " Failed",
-			"multisigTx": " ",
+			"multisigTx": "",
 			"entities": [{}]
 		},
 		{
