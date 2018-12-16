@@ -1,9 +1,289 @@
 {
 	"txs": [
 		{
+			"id": 198,
+			"desc": "Move OMG for safekeeping",
+			"multisigTx": "0x187505f5c7da506dd950fc7b0b4e082fac5c12f2b7519ddfc8faf4fe082dc4a4",
+			"entities": []
+		},
+		{
+			"id": 197,
+			"desc": "Diversifying ETH (makeDai via CDP)",
+			"multisigTx": "0xb7bfbc84a7f7524cf42a8cba01e2c6be5de4b37c1d84162fe39993b408ab24fa",
+			"entities": [{
+					"name": "1,000,000 DAI returned to Aragon MultiSig",
+					"tx": "0xb7bfbc84a7f7524cf42a8cba01e2c6be5de4b37c1d84162fe39993b408ab24fa"
+			}]
+		},
+		{
+			"id": 196,
+			"desc": "Test (makeDai via CDP)",
+			"multisigTx": "0xba57ec271af7c0ae22673bcfeaa69eb321a8dedd0dcb8a13f6ad6ded8066c387",
+			"entities": [{"name": "1 DAI created",
+					"tx": "0xd1ddce20c3aebdaa5eff24e0ae42689fcfe843581089f5490c5ac3f60200c930"
+			},
+				
+				]
+		},
+		{
+			"id": 195,
+			"desc": "Diversifying Assets (ETH)",
+			"multisigTx": "0x7e218169530f0c18cb45fd9f918b0db6c1880d1bb90e00ad3c47ea743f7de01b",
+			"entities": [{
+					"name": "Sent to Kraken for Diversification",
+					"tx": "0xe7271919cbdfcb9073b3cb05e51e3799a7981842ba9dc4167da07761eda8fd52"
+			},]
+		},
+		{
+			"id": 194,
+			"desc": "Voting App, AGP-1 (governance.aragonproject.eth)",
+			"multisigTx": " ",
+			"entities": []
+		},
+		{
+			"id": 193,
+			"desc": "ENS Public Resolver",
+			"multisigTx": " ",
+			"entities": []
+		},
+		{
+			"id": 192,
+			"desc": "ENS-EthNameService",
+			"multisigTx": " ",
+			"entities": []
+		},
+		{
+			"id": 191,
+			"desc": "ENS-EthNameService",
+			"multisigTx": "0x1127438fd9c3658e972cc3987bded32a985e78cfd9f244f22cd94092525d8c61",
+			"entities": []
+		},
+		{
+			"id": 190,
+			"desc": "Operating Expenses (ANT)",
+			"multisigTx": "0x1c7118f4eed5cbc373f231c45f4fcf3d62ec44253246b1c75546ff12f0e24ac1",
+			"entities": [
+		
+			{
+					"name": "RCD Monthly Services October (ANT)",
+					"tx": "0x67c6963de9610eb36a843c9618419108cc60a3c57912b4f658c12fbcdbf86f2a"
+			},
+			{
+					"name": "RCD September Extra Services (ANT)",
+					"tx": "0xef5de5b4a95f09e369ff2571b0cb83f858ffbd717a549a67acd3b04d804eba7d"
+			},
+			{
+					"name": "RCD Monthly Services November (ANT)",
+					"tx": "0x6ef5bfe2820d34662f8d59b44de75e3eeb505a3ea73cfbcba17fe1d8248372ac"
+			},
+			{
+					"name": "RCD October Extra Services (ANT)",
+					"tx": "0x18bb1f1f3ed61e82455769d70b3cc4ed3481253e93b9275520a70e013888149e"
+			}
+			{
+					"name": "Bounties: Ara-Dream DAO Party DevConIV and Community",
+					"tx": "0x1f88dd65bd4e0e5b3493f881209452a4091a38eaa3fc7bb3fa85d4df7275c07c"
+			}, 
+			{
+					"name": "Bounty: Ara-Dream DAO Party DevConIV",
+					"tx": "0xe4ca22cb598ad44635c72060a45d1b60a474af6b76bcbdcb3922cea12dc8dd76"
+			}	     
+
+				]
+		},
+		{
+			"id": 189,
+			"desc": "Operating Expenses ETH",
+			"multisigTx": "0x0b2c4cbb82fb2585e4e7e073d31e30c38a79e0438e560322458661dfce8b7096",
+			"entities": [ {
+					"name": "Nest Grant: BrightID (3)",
+					"tx": "0xd04ef4db53705ba15039beec3cfea08623ca7e782951e4094ceb412bd87c7b37"
+			},
+			{
+					"name": "Nest Grant: Wetonomy (1/2 of 1st)",
+					"tx": "0x0327b1616beeb6e0672118c63036e494e91f9f3b9520a83d8066a24ce04c8f13"
+			},
+			{
+					"name": "Nest Grant: TPS (2/2 of 2nd)",
+					"tx": "0xeaecd951474e03db94b6534cb645196d7075e855ad43c9fa9fb7c6796d3358e4"
+			},	    
+			{
+					"name": "Nest Grant: Tennagraph (1)",
+					"tx": "0x8b3197bc37a517a1c8d30e6fb6cf86bdaac14dffa30388f11f7fa73605db4ce9"
+			},
+			{
+					"name": "Nest Grant: Espresso (2/2 of 1st)",
+					"tx": "0x17398389be925be8070d7c02c035327db885a2a65912611790355e38c4be25e5"
+			},
+			{
+					"name": "Nest Grant: Pando (3)",
+					"tx": "0x303f4c2c516bfcb57e26232757a655c8df3ee86c9b89c22b3b31d74bf164a4a1"
+			},	    
+			{
+					"name": "AraCon Nest Speaker Reibursement",
+					"tx": "0x49202b4e215ee275e954d8fd26f5fda955e6e251986faf1934c5b7e20381f09a"
+			},
+			{
+					"name": "ANT Buyback (Bittrex)",
+					"tx": "0x3ff06e18a2bfcd27a7ae7ccb09a982c5150a56dbe33ac291c9aca8fb51d7e20d"
+			},
+			{
+					"name": "QuickNode: 1 Month",
+					"tx": "0xf917e3e953a4cd5163a084f269d6fcdc83178928607d1f2ad894b27edff20510"
+			},	    
+			{
+					"name": "Relocation and housing procurement Service Provider",
+					"tx": "0x6293fab8f2db66247b156972059f8a0add9e4414a7e32401dfb2ed06065fcf03"
+			},
+			{
+					"name": "Team Laptop Purchase",
+					"tx": "0x28d2e2cb2e5abe4a438da04c1415d82875cc8a1595b58954e948b1391736c51d"
+			},
+			{
+					"name": "Brand Design Contractor Payment (Sept+Oct)",
+					"tx": "0x8f2d596bd1d844ad7fe1e64718c7bc6ebee3b5f5632d3186d348db291405e9f4"
+			},	    
+			{
+					"name": "Transfer DAI to DevOps Service Provider",
+					"tx": "0x5168d293153d9fce254a494c8bb0020c036d7d206296221615be92d7ae26859c"
+			},
+			{
+					"name": "Exchange ETH to DAI for payment to DevOps Service Provider",
+					"tx": "0xd2b107e76443c99c39664993570ebacf248156e4eb08ca1923b73296780943f0"
+			},
+			{
+					"name": "HR Service Provider",
+					"tx": "0x13ce71e2405adf0dbcbaa00eac49770c5cb2d3f2d0013810800c12eefd1388df"
+			},	    
+			{
+					"name": "AraCon AV Service Provider, Payment 6/6",
+					"tx": "0x7bba8a8dadf427d45eaa2663ebbd37423bc561d26c2ab3b45059c45d4f99d1d1"
+			},
+			{
+					"name": "AraCon AV Service Provider, Payment 5/6",
+					"tx": "0x2579a030b4a8f7477085e4e22270563c138b719e248cf45886b03cefcb3b0fe5"
+			},
+			{
+					"name": "AraCon AV Service Provider, Payment 4/6",
+					"tx": "0x7c8a50d763022bbd1792618f9174e0289bef688177e1dc7178f174601c974917"
+			},	    
+			{
+					"name": "AraCon AV Service Provider, Payment 3/6",
+					"tx": "0x41a6d22c8dbf7b88dccfe8bdc9e22d7169e180d4267425c1de9800c2b31e48b0"
+			},
+			{
+					"name": "AraCon AV Service Provider, Payment 2/6",
+					"tx": "0x70819236a8da26fc5b66c4e5e23556578f934770e452fbadfa47d3d8b0f96270"
+			},
+			{
+					"name": "AraCon AV Service Provider, Payment 1/6",
+					"tx": "0x74f3665dd49f9193bb3df51c27de5c4a6f5c62cd486f22c7d6fd0d74fbe5140b"
+			},	    
+			{
+					"name": "Mainnet User Testing",
+					"tx": "0x2304a3f3191576719055964aaf82339904ffa6c7a9ae84f4dd5934f5f9a0e2e2"
+			},
+			{
+					"name": "Mainnet User Testing",
+					"tx": "0x7a7912c2011b1d82db0c15d10afdf615a5d3e54bb8dae9df65d6b76f6f4d5b51"
+			},
+			{
+					"name": "Mainnet User Testing",
+					"tx": "0x3dd4a56534d9f26bfd78e5c7ed6d121b185e959e49ec9ce78c443be0cbad45b2"
+			},	    
+			{
+					"name": "CryptoValley Conference Sponsorship, Payment 3/3",
+					"tx": "0xb64337e25dbddc0063418fc6ec87d642dbe1cb6e7f345afc7f8a731ebf98ccf3"
+			},
+			{
+					"name": "CryptoValley Conference Sponsorship, Payment 2/3",
+					"tx": "0x73d33e8f92617480edcacb26a05ec77f654d2b2a9830d6f1932bb89b3dc13910"
+			},
+			{
+					"name": "CryptoValley Conference Sponsorship, Payment 1/3",
+					"tx": "0x05fd577c30c84f0a05638e0916706485fc11711117afffd468067591c38e0dfb"
+			},	    
+			{
+					"name": "Gas for Mainnet Deployment",
+					"tx": "0xd8b09f084ecd7a5f334aec7bd24243cb6aed0fbed34c4b379651266a0623ae90"
+			},
+			{
+					"name": "Service Provider: Video Production Company",
+					"tx": "0x32ad15e9ada5bb2d8dacaa99d527f123a258225334683c6c69bc0ab4190efdee"
+			},
+			{
+					"name": "Mainnet Technical Audit: WHG",
+					"tx": "0x9b2ae1a1f0f5a5ef17c7d38fbbda554bf4a3c33578b02928ada5352dcbb0359b"
+			},	    
+			{
+					"name": "Exchange ETH for BTC for Equiptment Purchases (ETHFinex)",
+					"tx": "0xa372ae01b3130009a9ee013e2f5484a0eaf40dd3acd9de783a55789e26bdfef2"
+			}, 
+			{
+					"name": "Exchange ETH for BTC for Travel (ETHFinex)",
+					"tx": "0x3e584a032bdd1e0864b8ad8104c51ed007f663d6a9d93cc1a83e463bf554c020"
+			}, 
+			{
+					"name": "Exchange ETH for DAI for Bounty: Ara-Dream DAO Party DevConIV",
+					"tx": "0xc243e0fb26ef655edbfa49f6351cd1d626e816497a70a8db2d888ce408bc328a"
+			}, 	     
+			{
+					"name": "Nest Grant: Bright ID (2)",
+					"tx": "0x1365eeca4d507d529e2e557a82c495f37b24b1bd3630c5d42a442a1c166b5ecb"
+			},
+			{
+					"name": "HR Service Provider",
+					"tx": "0xff777882d1ec3a38ee5494fa3c50f624d4e2be35025453d0619f3c8c5f7e2642"
+			},
+			{
+					"name": "RCD Monthly Services October + September Extra Services (Fiat, EUR)",
+					"tx": "0xdb7d0c168834a2e6653fdeab2827476f20613c123dc795f65157dcc38a688987"
+			},
+			{
+					"name": "RCD Monthly Services October (ETH)",
+					"tx": "0x99cc983fe9b278db9384ea43af61b9c437e5b2b9a5376d08c23327f31ac6dc17"
+			},
+			{
+					"name": "RCD September Extra Services (ETH)",
+					"tx": "0x900ae1512491bd7f555c3f38788d946bd2728cf47843d21674a9c6e6aeb62761"
+			},
+			{
+					"name": "RCD Monthly Services November + October Extra Services (Fiat, EUR)",
+					"tx": "0x1b0b0894c6b4e682ece84e676a230c39e2350bcbeaeaf5e2e2e9f5c9ffaf151f"
+			},
+			{
+					"name": "RCD Monthly Services November (ETH)",
+					"tx": "0x871e2c7d5013d6027b01adc0d56bb3e583362f3f41d9b67e3afaf987d89c7a6c"
+			},
+			{
+					"name": "RCD October Extra Services (ETH)",
+					"tx": "0xf7124378bae99cef968672a895be11ffc5a6418c2d049742d4f1599fe88deaf5"
+			}	     
+
+				]
+		},
+		{
+			"id": 188,
+			"desc": "ENS-EthNameService",
+			"multisigTx": " ",
+			"entities": []
+		},
+		{
+			"id": 187,
+			"desc": "ENS-EthNameService",
+			"multisigTx": " ",
+			"entities": []
+		},
+		{
+			"id": 186,
+			"desc": "ENS Register",
+			"multisigTx": " ",
+			"entities": []
+		},
+		{
 			"id": 185,
 			"desc": "Operating Expenses (ANT)",
-			"multisigTx": "x93c32572365a169a16be3997444f41bf32ce659df29364c19909beb10dc5f7e2",
+			"multisigTx": "0x93c32572365a169a16be3997444f41bf32ce659df29364c19909beb10dc5f7e2",
 			"entities": [{
 					"name": "Referral Fee for Hired Aragon One Team Member",
 					"tx": "0xa6ce36d1945f4bfbfa6921c8d9e13ab3cefa56d6498eec5f163314e5b80cd982"
