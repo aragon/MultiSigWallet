@@ -236,6 +236,12 @@ table.table-tx tbody tr td {
 }
 .aragon-navbar  a:hover {
   cursor: pointer;
+  color: rgb(34, 224, 255);
+}
+
+a, a span, button {
+  outline: none;
+  transition: all 0.25s ease-in-out;
 }
 
 
