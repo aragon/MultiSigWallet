@@ -7,6 +7,10 @@ body {
   font-family: 'HKGrotesk-Regular', 'Maison Neue', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
 .navbar-default {
   background-color: #fff;
 }
