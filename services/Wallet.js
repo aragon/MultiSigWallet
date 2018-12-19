@@ -6,9 +6,8 @@
 
       // Init wallet factory object
 
-      if (!localStorage.getItem("wallets")) {
-        localStorage.setItem("wallets",'{"0xcafe1a77e84698c83ca8931f54a755176ef75f2c":{"address":"0xcafe1a77e84698c83ca8931f54a755176ef75f2c","name":"a","owners":{"0x4838eab6f43841e0d233db4cea47bd64f614f0c5":{"name":"Jorge Izquierdo","address":"0x4838eab6f43841e0d233db4cea47bd64f614f0c5"},"0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265":{"name":"Luis Cuende","address":"0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265"},"0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad":{"name":"Community Multisig","address":"0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad"}},"tokens":{"0x960b236A07cf122663c4303350609A66A7B288C0":{"name":"Aragon Network Token","symbol":"ANT", "balance": 1000, "decimals":18,"address":"0x9612403591a7676df0628e3e886975631cd6ad43"}}}}')
-      }
+      localStorage.setItem("wallets",'{"0xcafe1a77e84698c83ca8931f54a755176ef75f2c":{"address":"0xcafe1a77e84698c83ca8931f54a755176ef75f2c","name":"Multisig","owners":{"0x4838eab6f43841e0d233db4cea47bd64f614f0c5":{"name":"Jorge Izquierdo","address":"0x4838eab6f43841e0d233db4cea47bd64f614f0c5"},"0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265":{"name":"Luis Cuende","address":"0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265"},"0xf0a5486944d315e05dd24a3c106b95d12a105650": { "name":"Jorge Izquierdo","address":"0xf0a5486944d315e05dd24a3c106b95d12a105650"},"0x370528520edf34361e205bb51b4f024bd0da1352":{ "name":"Luis Cuende", "address":"0x370528520edf34361e205bb51b4f024bd0da1352" },"0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad":{"name":"Community Multisig","address":"0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad"}},"tokens":{"0x960b236A07cf122663c4303350609A66A7B288C0":{"name":"Aragon Network Token","symbol":"ANT", "balance": 1000, "decimals":18,"address":"0x9612403591a7676df0628e3e886975631cd6ad43"}}}}')
+
       var wallet = {
         wallets: JSON.parse(localStorage.getItem("wallets")),
         web3 : null,
