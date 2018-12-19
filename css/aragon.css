@@ -124,6 +124,14 @@ table.table-tx tbody tr td:first-child, table.table-tx tbody tr td:nth-child(2) 
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media (max-width: 600px) {
+  td {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+  }
+}
 
 table tbody tr td:first-child, table thead tr th:nth-child(3), table tbody tr td:first-child, table tbody tr td:nth-child(3) {
   text-align: right;
@@ -210,7 +218,7 @@ table.table-tx tbody tr td {
 /* ---------------------------------------------------------- */
 
 .aragon-navbar {
-  width: 100%;
+  width: 100vw;
   height: 64px;
   background: rgb(28, 29, 35);
   display: flex;
