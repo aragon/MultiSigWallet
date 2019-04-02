@@ -295,54 +295,30 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "        <tbody>\n" +
     "          <tr>\n" +
     "            <td>Ether</td>\n" +
-    "            <td class=\"text-right\"><span>{{balance|ether}} {{balanceUSD|fiat}}</span></td>\n" +
+    "            <td class=\"text-right\"><span>{{balance|ether}}</span></td>\n" +
     "          </tr>\n" +
     "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
     "            <td>\n" +
     "              {{token.name}}\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              {{token|token}} {{token.balanceUSD|fiat}}\n" +
+    "              {{token|token}}\n" +
     "            </td>\n" +
     "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "          <tr>\n" +
     "            <td>\n" +
     "              Euro\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              {{euro}} EUR\n" +
+    "              {{fiat.euro}} EUR\n" +
     "            </td>\n" +
     "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
-    "            <td>\n" +
-    "              Zcash\n" +
-    "            </td>\n" +
-    "            <td class=\"text-right\">\n" +
-    "              {{zec}} ZEC\n" +
-    "            </td>\n" +
-    "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
-    "            <td>\n" +
-    "              Bitcoin\n" +
-    "            </td>\n" +
-    "            <td class=\"text-right\">\n" +
-    "              {{btc}} BTC\n" +
-    "            </td>\n" +
-    "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "          <tr>\n" +
     "            <td>\n" +
     "              Decred\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              {{dcr}} DCR\n" +
-    "            </td>\n" +
-    "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
-    "            <td>\n" +
-    "              Dai\n" +
-    "            </td>\n" +
-    "            <td class=\"text-right\">\n" +
-    "              {{dai}} DAI\n" +
+    "              {{fiat.dcr}} DCR\n" +
     "            </td>\n" +
     "          </tr>\n" +
     "        </tbody>\n" +

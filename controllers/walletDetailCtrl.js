@@ -179,58 +179,26 @@
                   function (e, balance) {
                     console.log('got balance', e, balance)
                     $scope.wallet.tokens[token].balance = balance
-                    $http.get('https://api.coinmarketcap.com/v1/ticker/aragon/')
-                      .success(function(data, status, headers, config) {
-                          var web3 = new Web3()
-
-                          $scope.wallet.tokens[token].balanceUSD = web3.fromWei($scope.wallet.tokens[token].balance) * parseFloat(data[0].price_usd)
-                          console.log('ant usd balance', $scope.balanceUSD)
-                      })
                     Wallet.triggerUpdates();
                   }
-                )
-              );
-
-              // Get account balance
-              batch.add(
-                Token.balanceOf(
-                  token,
-                  Wallet.coinbase,
-                  function (e, balance) {
-                    $scope.userTokens[token].balance = balance;
-                    Wallet.triggerUpdates();
-                  }
-                )
-              );
+                  )
+                  );
             }
-          );
+            );
         }
 
         batch.execute();
       };
 
-      // Euro balance
-      $scope.euro = '1,500,000.00';
-      // Dai balance
-      $scope.dai = '1,000,000.00';
-      // Decred balance
-      $scope.dcr = '14,500.00';
-      // ZCash balance
-      fetch('https://api.zcha.in/v2/mainnet/accounts/t1TGWTiEHmYLBEMDeBpGbYTvW34SgQz1sVK')
-        .then(function(res) {
-            res.json().then(data => {
-              var num = parseFloat(data.balance);
-              $scope.zec = num.toFixed(2);
-            })
-        })
-        // Bitcoin balance
-        fetch('https://api.blockcypher.com/v1/btc/main/addrs/3B5eJnUXRa1w6X8giMwpd6XJKnHAVmeH2j')
-          .then(function(res) {
-              res.json().then(data => {
-                var num = parseFloat(data.balance)/100000000;
-                $scope.btc = num.toFixed(2);
-              })
-          })
+      $http.get('./fiat.json').
+      success(function(data, status, headers, config) {
+        $scope.fiat = {
+          euro: data.fiat.euro,
+          dcr: data.fiat.dcr
+        }
+
+        Wallet.triggerUpdates()
+      })
 
       Wallet
       .webInitialized

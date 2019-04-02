@@ -64,54 +64,30 @@
         <tbody>
           <tr>
             <td>Ether</td>
-            <td class="text-right"><span>{{balance|ether}} {{balanceUSD|fiat}}</span></td>
+            <td class="text-right"><span>{{balance|ether}}</span></td>
           </tr>
           <tr ng-repeat="token in wallet.tokens track by $index">
             <td>
               {{token.name}}
             </td>
             <td class="text-right">
-              {{token|token}} {{token.balanceUSD|fiat}}
+              {{token|token}}
             </td>
           </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
+          <tr>
             <td>
               Euro
             </td>
             <td class="text-right">
-              {{euro}} EUR
+              {{fiat.euro}} EUR
             </td>
           </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
-            <td>
-              Zcash
-            </td>
-            <td class="text-right">
-              {{zec}} ZEC
-            </td>
-          </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
-            <td>
-              Bitcoin
-            </td>
-            <td class="text-right">
-              {{btc}} BTC
-            </td>
-          </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
+          <tr>
             <td>
               Decred
             </td>
             <td class="text-right">
-              {{dcr}} DCR
-            </td>
-          </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
-            <td>
-              Dai
-            </td>
-            <td class="text-right">
-              {{dai}} DAI
+              {{fiat.dcr}} DCR
             </td>
           </tr>
         </tbody>
