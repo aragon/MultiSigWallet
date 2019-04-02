@@ -281,14 +281,15 @@
                 title: "Change daily limit to " + limit
               };
             case "a9059cbb":
-              var tokenAddress = tx.to;
+              var tokenAddress = tx.to.toLowerCase();
               var account = "0x" + tx.data.slice(34, 74);
               var token = {};
               Object.assign(token, $scope.wallet.tokens[tokenAddress]);
               token.balance = new Web3().toBigNumber( "0x" + tx.data.slice(74));
-              let tokenName = $filter("token")(token)
+              const tokenName = $filter("token")(token)
+
               return {
-                title: "Transfer " + tokenName.replace('undefined', 'ANT') + " to " + $filter("addressCanBeOwner")(account, $scope.wallet)
+                title: "Transfer " + tokenName + " to " + $filter("addressCanBeOwner")(account, $scope.wallet)
               };
             case "e20056e6":
               var oldOwner = "0x" + tx.data.slice(34, 74);
