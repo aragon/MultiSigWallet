@@ -34,7 +34,7 @@
 
           // Javascript doesn't have a deep object copy, this is a patch
           var copyObject = Wallet.getAllWallets()[hardCodedAddress];
-          var tokenAddresses = [Object.keys(copyObject.tokens)];
+          var tokenAddresses = Object.keys(copyObject.tokens);
           // The token collection is updated by the controller and the service, so must be merged.
           tokenAddresses.map(function(item){
             // Initialize, user token balance
