@@ -30,23 +30,21 @@
           return Wallet.updates;
         },
         function () {
-
-
           // Javascript doesn't have a deep object copy, this is a patch
           var copyObject = Wallet.getAllWallets()[hardCodedAddress];
           var tokenAddresses = Object.keys(copyObject.tokens);
           // The token collection is updated by the controller and the service, so must be merged.
-          tokenAddresses.map(function(item){
+          tokenAddresses.forEach(function(addr){
             // Initialize, user token balance
-            if (!$scope.userTokens[item]) {
-              $scope.userTokens[item] = {};
+            if (!$scope.userTokens[addr]) {
+              $scope.userTokens[addr] = {};
             }
             // Assign token to user tokens collection
-            Object.assign($scope.userTokens[item], copyObject.tokens[item]);
+            Object.assign($scope.userTokens[addr], copyObject.tokens[addr]);
 
             // If token has a previous balance, copy it
-            if ($scope.wallet.tokens && $scope.wallet.tokens[item] && copyObject.tokens && copyObject.tokens[item]){
-              copyObject.tokens[item].balance = $scope.wallet.tokens[item].balance;
+            if ($scope.wallet.tokens && $scope.wallet.tokens[addr] && copyObject.tokens && copyObject.tokens[addr]){
+              copyObject.tokens[addr].balance = $scope.wallet.tokens[addr].balance;
             }
           });
 
