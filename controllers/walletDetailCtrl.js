@@ -150,18 +150,11 @@
           Wallet.getBalance(
             hardCodedAddress,
             function (e, balance) {
-              if(!e && balance){
+              if(!e && balance) {
                 $scope.$apply(function () {
                   $scope.balance = balance;
                 })
-
-                $http.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
-                  .success(function(data, status, headers, config) {
-                      $scope.balanceUSD = new Web3().fromWei($scope.balance).toNumber() * parseFloat(data[0].price_usd)
-                      console.log('usd balance', $scope.balanceUSD)
-                  })
-
-                }
+              }
               })
           )
 
