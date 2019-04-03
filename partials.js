@@ -388,7 +388,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "    <tbody>\n" +
     "      <tr ng-repeat=\"txId in txIds track by $index\">\n" +
     "        <td>\n" +
-    "          <a target=\"blank\" href=\"{{transactions[txId].details.multisigTx|etherscan}}\">{{txId|bigNumber}}</a>\n" +
+    "          <a target=\"{{transactions[txId].details.multisigTx|etherscanTarget}}\" href=\"{{transactions[txId].details.multisigTx|etherscan}}\">{{txId|bigNumber}}</a>\n" +
     "        </td>\n" +
     "        <td>\n" +
     "          <span uib-popover=\"{{transactions[txId].to}}\" popover-enable=\"'true'\" popover-trigger=\"'mouseenter'\">\n" +

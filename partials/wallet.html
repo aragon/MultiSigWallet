@@ -157,7 +157,7 @@
     <tbody>
       <tr ng-repeat="txId in txIds track by $index">
         <td>
-          <a target="blank" href="{{transactions[txId].details.multisigTx|etherscan}}">{{txId|bigNumber}}</a>
+          <a target="{{transactions[txId].details.multisigTx|etherscanTarget}}" href="{{transactions[txId].details.multisigTx|etherscan}}">{{txId|bigNumber}}</a>
         </td>
         <td>
           <span uib-popover="{{transactions[txId].to}}" popover-enable="'true'" popover-trigger="'mouseenter'">
