@@ -64,14 +64,14 @@
         <tbody>
           <tr>
             <td>Ether</td>
-            <td class="text-right"><span>{{balance|ether}}</span></td>
+            <td class="text-right"><span>{{balance|ether}} {{balanceUSD|fiat}}</span></td>
           </tr>
           <tr ng-repeat="token in wallet.tokens track by $index">
             <td>
               {{token.name}}
             </td>
             <td class="text-right">
-              {{token|token}}
+              {{token|token}} {{token.balanceUSD|fiat}}
             </td>
           </tr>
           <tr>

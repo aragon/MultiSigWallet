@@ -295,14 +295,14 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "        <tbody>\n" +
     "          <tr>\n" +
     "            <td>Ether</td>\n" +
-    "            <td class=\"text-right\"><span>{{balance|ether}}</span></td>\n" +
+    "            <td class=\"text-right\"><span>{{balance|ether}} {{balanceUSD|fiat}}</span></td>\n" +
     "          </tr>\n" +
     "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
     "            <td>\n" +
     "              {{token.name}}\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              {{token|token}}\n" +
+    "              {{token|token}} {{token.balanceUSD|fiat}}\n" +
     "            </td>\n" +
     "          </tr>\n" +
     "          <tr>\n" +

@@ -39,7 +39,7 @@
               "decimals": 18
             },
             "0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359": {
-              "name": "Dai Stable Coin",
+              "name": "Dai stablecoin",
               "symbol": "DAI",
               "decimals": 18
             }

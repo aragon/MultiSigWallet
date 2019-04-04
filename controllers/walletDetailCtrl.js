@@ -23,6 +23,9 @@
 
       const hardCodedAddress = "0xcafe1a77e84698c83ca8931f54a755176ef75f2c";
 
+      // This is to be manually updated
+      const ethBalanceInCDP = '40000';
+
       $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
       $scope.$watch(
@@ -45,6 +48,7 @@
             // If token has a previous balance, copy it
             if ($scope.wallet.tokens && $scope.wallet.tokens[addr] && copyObject.tokens && copyObject.tokens[addr]){
               copyObject.tokens[addr].balance = $scope.wallet.tokens[addr].balance;
+              copyObject.tokens[addr].balanceUSD = $scope.wallet.tokens[addr].balanceUSD;
             }
           });
 
@@ -150,11 +154,23 @@
             function (e, balance) {
               if(!e && balance) {
                 $scope.$apply(function () {
-                  $scope.balance = balance;
+                  const ethBalanceInCDPBN = new Web3().toWei(ethBalanceInCDP);
+                  const balanceWithCDP = balance.plus(ethBalanceInCDPBN);
+
+                  $scope.balance = balanceWithCDP;
+
+
+                  $http.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
+                  .success(function(data, status, headers, config) {
+                      $scope.balanceUSD = new Web3().fromWei($scope.balance).toNumber() * parseFloat(data[0].price_usd);
+                      console.log('usd balance', $scope.balanceUSD);
+                  });
+
                 });
               }
-              })
-          );
+            }
+          )
+        );
 
         // Get token info
         if ($scope.wallet.tokens) {
@@ -170,12 +186,23 @@
                   function (e, balance) {
                     console.log('got balance', e, balance);
                     $scope.wallet.tokens[token].balance = balance;
+
                     Wallet.triggerUpdates();
+
+                    // Only fetch exchange rate for ANT/USD
+                    if($scope.wallet.tokens[token].symbol === 'ANT') {
+                      $http.get('https://api.coinmarketcap.com/v1/ticker/aragon/')
+                      .success(function(data, status, headers, config) {
+                        var web3 = new Web3();
+                        $scope.wallet.tokens[token].balanceUSD = web3.fromWei($scope.wallet.tokens[token].balance) * parseFloat(data[0].price_usd);
+                        console.log('ant usd balance', $scope.balanceUSD);
+                      });
+                    }
                   }
-                  )
-                  );
+                )
+              );
             }
-            );
+          );
         }
 
         batch.execute();
