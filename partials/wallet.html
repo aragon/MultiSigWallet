@@ -74,44 +74,20 @@
               {{token|token}} {{token.balanceUSD|fiat}}
             </td>
           </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
+          <tr>
             <td>
               Euro
             </td>
             <td class="text-right">
-              {{euro}} EUR
+              {{fiat.euro}} EUR
             </td>
           </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
-            <td>
-              Zcash
-            </td>
-            <td class="text-right">
-              {{zec}} ZEC
-            </td>
-          </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
-            <td>
-              Bitcoin
-            </td>
-            <td class="text-right">
-              {{btc}} BTC
-            </td>
-          </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
+          <tr>
             <td>
               Decred
             </td>
             <td class="text-right">
-              {{dcr}} DCR
-            </td>
-          </tr>
-          <tr ng-repeat="token in wallet.tokens track by $index">
-            <td>
-              Dai
-            </td>
-            <td class="text-right">
-              {{dai}} DAI
+              {{fiat.dcr}} DCR
             </td>
           </tr>
         </tbody>
@@ -181,7 +157,7 @@
     <tbody>
       <tr ng-repeat="txId in txIds track by $index">
         <td>
-          <a target="blank" href="{{transactions[txId].details.multisigTx|etherscan}}">{{txId|bigNumber}}</a>
+          <a target="{{transactions[txId].details.multisigTx|etherscanTarget}}" href="{{transactions[txId].details.multisigTx|etherscan}}">{{txId|bigNumber}}</a>
         </td>
         <td>
           <span uib-popover="{{transactions[txId].to}}" popover-enable="'true'" popover-trigger="'mouseenter'">

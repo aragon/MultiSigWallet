@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       options: {
         base: 'dist'
       },
-      src: ['transactions.json', 'index.html', '**/*.js']
+      src: ['transactions.json', 'fiat.json', 'index.html', '**/*.js']
     },
     'http-server': {
 

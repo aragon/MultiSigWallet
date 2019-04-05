@@ -6,12 +6,12 @@
       $scope.wallet = {};
 
       const hardcodedOwners = {
-        "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": "Jorge Izquierdo",
-        "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": "Luis Cuende",
+        "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": "Jorge Izquierdo (Old)",
+        "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": "Luis Cuende (Old)",
         "0xf0a5486944d315e05dd24a3c106b95d12a105650": "Jorge Izquierdo",
         "0x370528520edf34361e205bb51b4f024bd0da1352": "Luis Cuende",
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "Community Multisig",
-      }
+      };
 
       const hardcodedTagline = {
         "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": ", Board Member",
@@ -19,34 +19,36 @@
         "0xf0a5486944d315e05dd24a3c106b95d12a105650": ", Board Member",
         "0x370528520edf34361e205bb51b4f024bd0da1352": ", Board Member",
         "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": "",
-      }
+      };
 
-      const hardCodedAddress = "0xcafe1a77e84698c83ca8931f54a755176ef75f2c"
+      const hardCodedAddress = "0xcafe1a77e84698c83ca8931f54a755176ef75f2c";
 
-      $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+      // This is to be manually updated
+      const ethBalanceInCDP = '40000';
+
+      $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
       $scope.$watch(
         function () {
           return Wallet.updates;
         },
         function () {
-
-
           // Javascript doesn't have a deep object copy, this is a patch
           var copyObject = Wallet.getAllWallets()[hardCodedAddress];
-          var tokenAddresses = [Object.keys(copyObject.tokens)];
+          var tokenAddresses = Object.keys(copyObject.tokens);
           // The token collection is updated by the controller and the service, so must be merged.
-          tokenAddresses.map(function(item){
+          tokenAddresses.forEach(function(addr){
             // Initialize, user token balance
-            if (!$scope.userTokens[item]) {
-              $scope.userTokens[item] = {};
+            if (!$scope.userTokens[addr]) {
+              $scope.userTokens[addr] = {};
             }
             // Assign token to user tokens collection
-            Object.assign($scope.userTokens[item], copyObject.tokens[item]);
+            Object.assign($scope.userTokens[addr], copyObject.tokens[addr]);
 
             // If token has a previous balance, copy it
-            if ($scope.wallet.tokens && $scope.wallet.tokens[item] && copyObject.tokens && copyObject.tokens[item]){
-              copyObject.tokens[item].balance = $scope.wallet.tokens[item].balance;
+            if ($scope.wallet.tokens && $scope.wallet.tokens[addr] && copyObject.tokens && copyObject.tokens[addr]){
+              copyObject.tokens[addr].balance = $scope.wallet.tokens[addr].balance;
+              copyObject.tokens[addr].balanceUSD = $scope.wallet.tokens[addr].balanceUSD;
             }
           });
 
@@ -150,20 +152,25 @@
           Wallet.getBalance(
             hardCodedAddress,
             function (e, balance) {
-              if(!e && balance){
+              if(!e && balance) {
                 $scope.$apply(function () {
-                  $scope.balance = balance;
-                })
+                  const ethBalanceInCDPBN = new Web3().toWei(ethBalanceInCDP);
+                  const balanceWithCDP = balance.plus(ethBalanceInCDPBN);
 
-                $http.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
+                  $scope.balance = balanceWithCDP;
+
+
+                  $http.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
                   .success(function(data, status, headers, config) {
-                      $scope.balanceUSD = new Web3().fromWei($scope.balance).toNumber() * parseFloat(data[0].price_usd)
-                      console.log('usd balance', $scope.balanceUSD)
-                  })
+                      $scope.balanceUSD = new Web3().fromWei($scope.balance).toNumber() * parseFloat(data[0].price_usd);
+                      console.log('usd balance', $scope.balanceUSD);
+                  });
 
-                }
-              })
+                });
+              }
+            }
           )
+        );
 
         // Get token info
         if ($scope.wallet.tokens) {
@@ -177,28 +184,20 @@
                   token,
                   hardCodedAddress,
                   function (e, balance) {
-                    console.log('got balance', e, balance)
-                    $scope.wallet.tokens[token].balance = balance
-                    $http.get('https://api.coinmarketcap.com/v1/ticker/aragon/')
+                    console.log('got balance', e, balance);
+                    $scope.wallet.tokens[token].balance = balance;
+
+                    Wallet.triggerUpdates();
+
+                    // Only fetch exchange rate for ANT/USD
+                    if($scope.wallet.tokens[token].symbol === 'ANT') {
+                      $http.get('https://api.coinmarketcap.com/v1/ticker/aragon/')
                       .success(function(data, status, headers, config) {
-                          var web3 = new Web3()
-
-                          $scope.wallet.tokens[token].balanceUSD = web3.fromWei($scope.wallet.tokens[token].balance) * parseFloat(data[0].price_usd)
-                          console.log('ant usd balance', $scope.balanceUSD)
-                      })
-                    Wallet.triggerUpdates();
-                  }
-                )
-              );
-
-              // Get account balance
-              batch.add(
-                Token.balanceOf(
-                  token,
-                  Wallet.coinbase,
-                  function (e, balance) {
-                    $scope.userTokens[token].balance = balance;
-                    Wallet.triggerUpdates();
+                        var web3 = new Web3();
+                        $scope.wallet.tokens[token].balanceUSD = web3.fromWei($scope.wallet.tokens[token].balance) * parseFloat(data[0].price_usd);
+                        console.log('ant usd balance', $scope.balanceUSD);
+                      });
+                    }
                   }
                 )
               );
@@ -209,28 +208,15 @@
         batch.execute();
       };
 
-      // Euro balance
-      $scope.euro = '1,500,000.00';
-      // Dai balance
-      $scope.dai = '1,000,000.00';
-      // Decred balance
-      $scope.dcr = '14,500.00';
-      // ZCash balance
-      fetch('https://api.zcha.in/v2/mainnet/accounts/t1TGWTiEHmYLBEMDeBpGbYTvW34SgQz1sVK')
-        .then(function(res) {
-            res.json().then(data => {
-              var num = parseFloat(data.balance);
-              $scope.zec = num.toFixed(2);
-            })
-        })
-        // Bitcoin balance
-        fetch('https://api.blockcypher.com/v1/btc/main/addrs/3B5eJnUXRa1w6X8giMwpd6XJKnHAVmeH2j')
-          .then(function(res) {
-              res.json().then(data => {
-                var num = parseFloat(data.balance)/100000000;
-                $scope.btc = num.toFixed(2);
-              })
-          })
+      $http.get('./fiat.json').
+      success(function(data, status, headers, config) {
+        $scope.fiat = {
+          euro: data.fiat.euro,
+          dcr: data.fiat.dcr
+        };
+
+        Wallet.triggerUpdates();
+      });
 
       Wallet
       .webInitialized
@@ -251,7 +237,7 @@
       });
 
       $scope.getOwnerName = function (address) {
-        return hardcodedOwners[address] + hardcodedTagline[address]
+        return hardcodedOwners[address] + hardcodedTagline[address];
       };
 
       $scope.getParam = function (tx) {
@@ -281,14 +267,15 @@
                 title: "Change daily limit to " + limit
               };
             case "a9059cbb":
-              var tokenAddress = tx.to;
+              var tokenAddress = tx.to.toLowerCase();
               var account = "0x" + tx.data.slice(34, 74);
               var token = {};
               Object.assign(token, $scope.wallet.tokens[tokenAddress]);
               token.balance = new Web3().toBigNumber( "0x" + tx.data.slice(74));
-              let tokenName = $filter("token")(token)
+              const tokenName = $filter("token")(token);
+
               return {
-                title: "Transfer " + tokenName.replace('undefined', 'ANT') + " to " + $filter("addressCanBeOwner")(account, $scope.wallet)
+                title: "Transfer " + tokenName + " to " + $filter("addressCanBeOwner")(account, $scope.wallet)
               };
             case "e20056e6":
               var oldOwner = "0x" + tx.data.slice(34, 74);

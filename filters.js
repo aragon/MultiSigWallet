@@ -116,7 +116,12 @@
     })
     .filter('etherscan', function () {
       return function (txid) {
-        return 'https://etherscan.io/tx/' + txid
+        return txid ? ('https://etherscan.io/tx/' + txid) : '#/';
+      };
+    })
+    .filter('etherscanTarget', function () {
+      return function (txid) {
+        return txid ? 'blank' : '';
       };
     })
     .filter('token', function () {

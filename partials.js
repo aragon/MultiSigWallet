@@ -305,44 +305,20 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "              {{token|token}} {{token.balanceUSD|fiat}}\n" +
     "            </td>\n" +
     "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "          <tr>\n" +
     "            <td>\n" +
     "              Euro\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              {{euro}} EUR\n" +
+    "              {{fiat.euro}} EUR\n" +
     "            </td>\n" +
     "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
-    "            <td>\n" +
-    "              Zcash\n" +
-    "            </td>\n" +
-    "            <td class=\"text-right\">\n" +
-    "              {{zec}} ZEC\n" +
-    "            </td>\n" +
-    "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
-    "            <td>\n" +
-    "              Bitcoin\n" +
-    "            </td>\n" +
-    "            <td class=\"text-right\">\n" +
-    "              {{btc}} BTC\n" +
-    "            </td>\n" +
-    "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
+    "          <tr>\n" +
     "            <td>\n" +
     "              Decred\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
-    "              {{dcr}} DCR\n" +
-    "            </td>\n" +
-    "          </tr>\n" +
-    "          <tr ng-repeat=\"token in wallet.tokens track by $index\">\n" +
-    "            <td>\n" +
-    "              Dai\n" +
-    "            </td>\n" +
-    "            <td class=\"text-right\">\n" +
-    "              {{dai}} DAI\n" +
+    "              {{fiat.dcr}} DCR\n" +
     "            </td>\n" +
     "          </tr>\n" +
     "        </tbody>\n" +
@@ -412,7 +388,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "    <tbody>\n" +
     "      <tr ng-repeat=\"txId in txIds track by $index\">\n" +
     "        <td>\n" +
-    "          <a target=\"blank\" href=\"{{transactions[txId].details.multisigTx|etherscan}}\">{{txId|bigNumber}}</a>\n" +
+    "          <a target=\"{{transactions[txId].details.multisigTx|etherscanTarget}}\" href=\"{{transactions[txId].details.multisigTx|etherscan}}\">{{txId|bigNumber}}</a>\n" +
     "        </td>\n" +
     "        <td>\n" +
     "          <span uib-popover=\"{{transactions[txId].to}}\" popover-enable=\"'true'\" popover-trigger=\"'mouseenter'\">\n" +
