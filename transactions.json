@@ -1,6 +1,12 @@
 {
 	"txs": [
 		{
+			"id": 246,
+			"desc": "Aragon Black Flock Funding",
+			"multisigTx": "0xb7e7c63426771492fb4a8865b5725eeb0c675d3f5d2c1c67a04193eb2d350821",
+			"entities": [{}]
+		},
+		{
 			"id": 198,
 			"desc": "Move OMG for safekeeping",
 			"multisigTx": "0x187505f5c7da506dd950fc7b0b4e082fac5c12f2b7519ddfc8faf4fe082dc4a4",
@@ -21,9 +27,7 @@
 			"multisigTx": "0xba57ec271af7c0ae22673bcfeaa69eb321a8dedd0dcb8a13f6ad6ded8066c387",
 			"entities": [{"name": "1 DAI created",
 					"tx": "0xd1ddce20c3aebdaa5eff24e0ae42689fcfe843581089f5490c5ac3f60200c930"
-			}
-				
-				]
+			}]
 		},
 		{
 			"id": 195,
@@ -63,7 +67,7 @@
 			"desc": "Operating Expenses (ANT)",
 			"multisigTx": "0x1c7118f4eed5cbc373f231c45f4fcf3d62ec44253246b1c75546ff12f0e24ac1",
 			"entities": [
-		
+
 			{
 					"name": "RCD Monthly Services October (ANT)",
 					"tx": "0x67c6963de9610eb36a843c9618419108cc60a3c57912b4f658c12fbcdbf86f2a"
@@ -83,11 +87,11 @@
 			{
 					"name": "Bounties: Ara-Dream DAO Party DevConIV and Community",
 					"tx": "0x1f88dd65bd4e0e5b3493f881209452a4091a38eaa3fc7bb3fa85d4df7275c07c"
-			}, 
+			},
 			{
 					"name": "Bounty: Ara-Dream DAO Party DevConIV",
 					"tx": "0xe4ca22cb598ad44635c72060a45d1b60a474af6b76bcbdcb3922cea12dc8dd76"
-			}	     
+			}
 
 				]
 		},
@@ -106,7 +110,7 @@
 			{
 					"name": "Nest Grant: TPS (2/2 of 2nd)",
 					"tx": "0xeaecd951474e03db94b6534cb645196d7075e855ad43c9fa9fb7c6796d3358e4"
-			},	    
+			},
 			{
 					"name": "Nest Grant: Tennagraph (1)",
 					"tx": "0x8b3197bc37a517a1c8d30e6fb6cf86bdaac14dffa30388f11f7fa73605db4ce9"
@@ -118,7 +122,7 @@
 			{
 					"name": "Nest Grant: Pando (3)",
 					"tx": "0x303f4c2c516bfcb57e26232757a655c8df3ee86c9b89c22b3b31d74bf164a4a1"
-			},	    
+			},
 			{
 					"name": "AraCon Nest Speaker Reibursement",
 					"tx": "0x49202b4e215ee275e954d8fd26f5fda955e6e251986faf1934c5b7e20381f09a"
@@ -130,7 +134,7 @@
 			{
 					"name": "QuickNode: 1 Month",
 					"tx": "0xf917e3e953a4cd5163a084f269d6fcdc83178928607d1f2ad894b27edff20510"
-			},	    
+			},
 			{
 					"name": "Relocation and housing procurement Service Provider",
 					"tx": "0x6293fab8f2db66247b156972059f8a0add9e4414a7e32401dfb2ed06065fcf03"
@@ -142,7 +146,7 @@
 			{
 					"name": "Brand Design Contractor Payment (Sept+Oct)",
 					"tx": "0x8f2d596bd1d844ad7fe1e64718c7bc6ebee3b5f5632d3186d348db291405e9f4"
-			},	    
+			},
 			{
 					"name": "Transfer DAI to DevOps Service Provider",
 					"tx": "0x5168d293153d9fce254a494c8bb0020c036d7d206296221615be92d7ae26859c"
@@ -154,7 +158,7 @@
 			{
 					"name": "HR Service Provider",
 					"tx": "0x13ce71e2405adf0dbcbaa00eac49770c5cb2d3f2d0013810800c12eefd1388df"
-			},	    
+			},
 			{
 					"name": "AraCon AV Service Provider, Payment 6/6",
 					"tx": "0x7bba8a8dadf427d45eaa2663ebbd37423bc561d26c2ab3b45059c45d4f99d1d1"
@@ -166,7 +170,7 @@
 			{
 					"name": "AraCon AV Service Provider, Payment 4/6",
 					"tx": "0x7c8a50d763022bbd1792618f9174e0289bef688177e1dc7178f174601c974917"
-			},	    
+			},
 			{
 					"name": "AraCon AV Service Provider, Payment 3/6",
 					"tx": "0x41a6d22c8dbf7b88dccfe8bdc9e22d7169e180d4267425c1de9800c2b31e48b0"
@@ -178,7 +182,7 @@
 			{
 					"name": "AraCon AV Service Provider, Payment 1/6",
 					"tx": "0x74f3665dd49f9193bb3df51c27de5c4a6f5c62cd486f22c7d6fd0d74fbe5140b"
-			},	    
+			},
 			{
 					"name": "Mainnet User Testing",
 					"tx": "0x2304a3f3191576719055964aaf82339904ffa6c7a9ae84f4dd5934f5f9a0e2e2"
@@ -190,7 +194,7 @@
 			{
 					"name": "Mainnet User Testing",
 					"tx": "0x3dd4a56534d9f26bfd78e5c7ed6d121b185e959e49ec9ce78c443be0cbad45b2"
-			},	    
+			},
 			{
 					"name": "CryptoValley Conference Sponsorship, Payment 3/3",
 					"tx": "0xb64337e25dbddc0063418fc6ec87d642dbe1cb6e7f345afc7f8a731ebf98ccf3"
@@ -202,7 +206,7 @@
 			{
 					"name": "CryptoValley Conference Sponsorship, Payment 1/3",
 					"tx": "0x05fd577c30c84f0a05638e0916706485fc11711117afffd468067591c38e0dfb"
-			},	    
+			},
 			{
 					"name": "Gas for Mainnet Deployment",
 					"tx": "0xd8b09f084ecd7a5f334aec7bd24243cb6aed0fbed34c4b379651266a0623ae90"
@@ -214,19 +218,19 @@
 			{
 					"name": "Mainnet Technical Audit: WHG",
 					"tx": "0x9b2ae1a1f0f5a5ef17c7d38fbbda554bf4a3c33578b02928ada5352dcbb0359b"
-			},	    
+			},
 			{
 					"name": "Exchange ETH for BTC for Equiptment Purchases (ETHFinex)",
 					"tx": "0xa372ae01b3130009a9ee013e2f5484a0eaf40dd3acd9de783a55789e26bdfef2"
-			}, 
+			},
 			{
 					"name": "Exchange ETH for BTC for Travel (ETHFinex)",
 					"tx": "0x3e584a032bdd1e0864b8ad8104c51ed007f663d6a9d93cc1a83e463bf554c020"
-			}, 
+			},
 			{
 					"name": "Exchange ETH for DAI for Bounty: Ara-Dream DAO Party DevConIV",
 					"tx": "0xc243e0fb26ef655edbfa49f6351cd1d626e816497a70a8db2d888ce408bc328a"
-			}, 	     
+			},
 			{
 					"name": "Nest Grant: Bright ID (2)",
 					"tx": "0x1365eeca4d507d529e2e557a82c495f37b24b1bd3630c5d42a442a1c166b5ecb"
@@ -258,7 +262,7 @@
 			{
 					"name": "RCD October Extra Services (ETH)",
 					"tx": "0xf7124378bae99cef968672a895be11ffc5a6418c2d049742d4f1599fe88deaf5"
-			}	     
+			}
 
 				]
 		},
@@ -287,7 +291,7 @@
 			"entities": [{
 					"name": "Referral Fee for Hired Aragon One Team Member",
 					"tx": "0xa6ce36d1945f4bfbfa6921c8d9e13ab3cefa56d6498eec5f163314e5b80cd982"
-			}, 
+			},
 			{
 					"name": "RCD Monthly Services: September (ANT)",
 					"tx": "0xf569aba87bac5a138c30886c5f58f47927d0dd1bd58f499330abc4360df52d8f"
@@ -295,7 +299,7 @@
 			{
 					"name": "RCD August Extra Services (ANT)",
 					"tx": "0x99a8d4822535112f4f0928d71e31c46a0efeda7629231a5d7b8ccaf2172e9dcb"
-			}	     
+			}
 
 				]
 		},
@@ -470,8 +474,8 @@
 			{
 					"name": "Nest Grant: Frame (2)",
 					"tx": "0xac4f4f8114dc8de4b54e3400c3227f7f2ef896b4e74de7c610bea630c4cd855d"
-			}	
-			
+			}
+
 				]
 		},
 		{
@@ -489,7 +493,7 @@
 			{
 					"name": "RCD July Extra Services (ANT)",
 					"tx": "0x96f17855ad933284883f956d9503abe330cf09deb5af6f5433d8d60ff1b27822"
-			}	     
+			}
 				]
 		},
 		{
@@ -544,8 +548,8 @@
 			{
 					"name": "Giveth: AragonDAC",
 					"tx": "0xc88cece3afdd54a511f5221deaa696026f4be0eee461f2e60bfaa4be7c2779ca"
-			}	
-			
+			}
+
 				]
 		},
 		{
@@ -614,8 +618,8 @@
 			{
 					"name": "Ara-Beers Zug Meetup (CVC with Web3 & Status)",
 					"tx": "0x6959dcace217e6ed99c463dad34d7ac281999298b660004dca5a7733bfea179d"
-			}	     
-				     
+			}
+
 				]
 		},
 		{
@@ -677,7 +681,7 @@
 			{
 					"name": "ETHBuenosAires Hackathon Prizes",
 					"tx": "0xf903536109c89e48f3e3b2f46f866c18e5008741b7555dc5866b11c1a4bd2c63"
-			}, 
+			},
 			{
 					"name": "ETHBuenosAires Hackathon Prizes",
 					"tx": "0xba3254971376c1839abeb3590c6cf53ae3a81ba373a24a71345de3e9eee4714d"
@@ -689,7 +693,7 @@
 			{
 					"name": "ETHBuenosAires Hackathon Prizes",
 					"tx": "0x71aba08b3d77bbc08d4291d596a20ae740b805c63d05fa143b84d0b795a84aba"
-			}, 	     
+			},
 			{
 					"name": "Code Audit: WHG",
 					"tx": "0xaf593885f930d8a71b6191bdc8bfb729c4aed649c7dc9fb4264ef75f280c21a5"
@@ -713,7 +717,7 @@
 			{
 					"name": "RCD Monthly Services: June",
 					"tx": "0x0299c18cfb5af660353a9c58f7f5ae92d1bf6af5b1321ba4bf2aa4fcd82cbe3e"
-			}	     
+			}
 				    ]
 		},
 		{
@@ -731,7 +735,7 @@
 			{
 					"name": "ETHBuenosAires Hackathon Prizes",
 					"tx": "0x75e80197231204c8c32fa6627c112dc3d5e65e97d4d62c7f58abfc02d50be6d4"
-			},	     
+			},
 			{
 					"name": "Code Audit: WHG",
 					"tx": "0xd7164938981a81eb9a29cb83a3885db7dc3477e570f08a0bf0f518b4e8d77219"
@@ -743,7 +747,7 @@
 			{
 					"name": "Professional Services Provider: Lakeside",
 					"tx": "0xf2f6a828ca25ebfcac766e8a42d4170eb5febd537a030e4b9794f35c27a1831a"
-			},	    
+			},
 			{
 					"name": "Professional Services Provider: Lakeside",
 					"tx": "0x501165a0d587990274c84bd03a60954c11c4131cff8c77aec177c1102529a5ca"
@@ -759,7 +763,7 @@
 			{
 					"name": "RCD April Extra Services",
 					"tx": "0x0afe9388e7616fc9534f45f2cc526447e5a760017f2ae4dab19bda8d298f56c8"
-			},	     
+			},
 			{
 					"name": "RCD Monthly Services: June",
 					"tx": "0x4d8d2718d221fdeef118d535cac8ab644a6927d9c1157ab261fbbc3e89dc8929"
@@ -767,7 +771,7 @@
 			{
 					"name": "RCD Monthly Services: June and May Extra Services (FIAT)",
 					"tx": "0x0538accc25a2f016f53845ba53d78d221bb22a38ba06fca8aafdc99322fa5785"
-			},	     
+			},
 			{
 					"name": "RCD May Extra Services",
 					"tx": "0xef45ac7db4a74c3c76b4927675e62272625fc55d5e72d186cf57d4faf7965b30"
@@ -776,7 +780,7 @@
 					"name": "Nest Grant: Gnarly (2)",
 					"tx": "0x1b8a01fbc455fb7c1172bc8abc3d577486e248cf0ed215479318c33985fa4457"
 			}
-				     
+
 				    ]
 		},
 		{
@@ -814,7 +818,7 @@
 			{
 					"name": "Ethereum Community Tour: Seoul Hackathon Prizes",
 					"tx": "0x8a1486da27f2a94b34676558e740fa6307ab3ab16915450a1d71893d2893ab5f"
-			}	     
+			}
 				    ]
 		},
 		{
@@ -901,11 +905,11 @@
 			{
 					"name": "Nest Grant: Pando (1)",
 					"tx": "0xfa3baaef58001b6f536e0877298eae722193bd50917f9fe3c1fb232164b2e8f4"
-			},	     
+			},
 			{
 					"name": "Nest Grant: Prysmatic Labs (1)",
 					"tx": "0xdf7dcc12c7af9a48d8b280d16a60675b641c800a89c40f9dd22ac7c05249db23"
-			},	     
+			},
 			{
 					"name": "RCD April Payment",
 					"tx": "0x334f307ea3558f2110b8a469eabee1d34ae76a186b49a737f7ee6ce5f81ae47d"
@@ -917,11 +921,11 @@
 			{
 					"name": "EdCon Sponsorship",
 					"tx": "0x8468209270e532da260a5bacc690ac9bc5a7a1f5797b8f7cc20ebddbb62c79a6"
-			},	     
+			},
 			{
 					"name": "Token Summit Tickets (2) for Aragon Team",
 					"tx": "0xcbaeb2941ab620f5a5d1e1c65282210be01dfa23e10790e243b6f5bde7945263"
-			}, 
+			},
 			{
 					"name": "ETHCC Sponsorship",
 					"tx": "0xf1573df0d0c1070e81582f9930f68d3f1d1d12f978eb6134a98af186b5c86976"
@@ -939,7 +943,7 @@
 			"multisigTx": "0x7211876359dc6dc9cd37029cacc7833952110862538afd28ead623dad3af5921",
 			"entities": []
 		},
-		
+
 		{
 			"id": 152,
 			"desc": "Perform Token Buy Back",
