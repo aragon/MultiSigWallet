@@ -210,10 +210,7 @@
 
       $http.get('./fiat.json').
       success(function(data, status, headers, config) {
-        $scope.fiat = {
-          euro: data.fiat.euro,
-          dcr: data.fiat.dcr
-        };
+        $scope.fiat = data.fiat;
 
         Wallet.triggerUpdates();
       });

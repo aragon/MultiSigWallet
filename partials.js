@@ -315,6 +315,14 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "          </tr>\n" +
     "          <tr>\n" +
     "            <td>\n" +
+    "              Swiss Franc\n" +
+    "            </td>\n" +
+    "            <td class=\"text-right\">\n" +
+    "              {{fiat.chf}} CHF\n" +
+    "            </td>\n" +
+    "          </tr>\n" +
+    "          <tr>\n" +
+    "            <td>\n" +
     "              Decred\n" +
     "            </td>\n" +
     "            <td class=\"text-right\">\n" +
