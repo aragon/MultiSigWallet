@@ -1,12 +1,131 @@
 {
 	"txs": [
-		
+
+		{
+			"id": 248,
+			"desc": "Purchase of CHF (Swiss Francs) for operational expenses",
+			"multisigTx": "0xa73bf53c6ab3a15942ec9951f24e3561b6b300f71ce59c6a95dbc035479b6d6c",
+			"entities": [{}]
+		},
+		{
+			"id": 247,
+			"desc": "Purchase of CHF (Swiss Francs) for operational expenses",
+			"multisigTx": "0x55f1ac8d9296dc77f88f53598d96f8c9fd8cb1ed10140f6257a4c5ddd9db9a19",
+			"entities": [{}]
+		},
 		{
 			"id": 246,
 			"desc": "Aragon Black Flock Funding",
 			"multisigTx": "0xb7e7c63426771492fb4a8865b5725eeb0c675d3f5d2c1c67a04193eb2d350821",
 			"entities": [{}]
 		},
+		{
+			"id": 245,
+			"desc": "Nest DAO funding to pay for Frame Nest grant",
+			"multisigTx": "0xb35ac4f9ba59ac514d37bbe013874997c9772369fe45cdd3b71e5a7727170a8c",
+			"entities": [{}]
+		},
+		{
+			"id": 244,
+			"desc": "Prefunding OTC desk account for treasury management",
+			"multisigTx": "0x8f854ad3c60fce8ef26b4cda8fa87a7e5ea30953a29edde3832118c3069abb5b",
+			"entities": [{}]
+		},
+
+		{
+			"id": 234 ,
+			"desc": "Aragon One funding as per AGP-5",
+			"multisigTx": "0x4c9ba9224636ecc747e509b239c7792135fdff5656a5507209145bd6df11eb85",
+			"entities": [{}]
+		},
+		{
+			"id": 233 ,
+			"desc": "Funding OTC provider account for treasury management and operational expenses",
+			"multisigTx": "0x479c96949d64eb1f9ef9f2760d20c15d4e0d5f5448608a6248b779c82994731e",
+			"entities": [{}]
+		},
+
+		{
+			"id": 232 ,
+			"desc": "Nest DAO funding to pay for Aragon Mesh Nest grant",
+			"multisigTx": "0x6e352a3d3431d2246e2401b17af155db7423f04e3fe19631bde089171f5d1149",
+			"entities": [{}]
+		},
+		{
+			"id":  231,
+			"desc": "Payment to Giveth milestone: https://beta.giveth.io/campaigns/5b5b38b19737b23ee71c73a6/milestones/5c9eaf33dd7b2c0bf14ed21",
+			"multisigTx": "0x30d267c00483b90aff5ab2bed85e67d9ba5d62281fc222c0be453b2ce5e290b5",
+			"entities": [{}]
+		},
+
+		{
+			"id": 230 ,
+			"desc": "Payment to Giveth milestone: https://beta.giveth.io/campaigns/5b5b38b19737b23ee71c73a6/milestones/5c9eaf33dd7b2c0bf14ed21",
+			"multisigTx": "0xcef97b6c243eb3fbb34aa1e238d9ff2614dc1768b60d46dc1517f920f1ec70ed",
+			"entities": [{}]
+		},
+		{
+			"id": 229 ,
+			"desc": "ANT payment to lawyers working on Aragon trademark matters",
+			"multisigTx": "0x557efb9f6e22fe0eaa855444e56dee59d380d86603b452d631050173336911ad",
+			"entities": [{}]
+		},
+		{
+			"id": 228,
+			"desc": "ETH payment to lawyers working on Aragon trademark matters",
+			"multisigTx": "0x3dd1e7c3fa6f3236d620cd9088671e407a7dd06fb84c484fa7b531964408d44f",
+			"entities": [{}]
+		},
+		{
+			"id": 227 ,
+			"desc": "Transfer of 2970 ETH to buy DAI500K from OTC providers",
+			"multisigTx": "0xeaacb448accd688d170118b6c34e4325ed4b0152efc923c94e7669268d3ab7c4",
+			"entities": [{}]
+		},
+
+		{
+			"id": 226 ,
+			"desc": "payout of the grant to Protofire / Altoros Group for their work on the Aragon Payroll app",
+			"multisigTx": "0x9013016ac174ab6cc5d934bf9e74d3cfec91a8df0583a9f4d179c89dec844590",
+			"entities": [{}]
+		},
+		{
+			"id": 223 ,
+			"desc": "1280 eth to pay for Authio as per AGP-18",
+			"multisigTx": "0x30acf512400ff39ba358c256e4b6576f99b197dacfeadbb80951c2d28b63a92d",
+			"entities": [{}]
+		},
+		{
+			"id": 222 ,
+			"desc": "ANT 185K for Nest 2018 reward payments",
+			"multisigTx": "0x54b079e6bb704d2db8d7fd537b6958ef6782cca0f4fd3c9734db8f03f6246378",
+			"entities": [{}]
+		},
+		{
+			"id": 221 ,
+			"desc": "1200 ETH for Nest 2018 payments",
+			"multisigTx": "0xf82ba58d1a572f45755c23e5ef302941564220455afed0ca068771e4c7ea126d",
+			"entities": [{}]
+		},
+		{
+			"id": 220 ,
+			"desc": "ANT buyback through OTC provider Galois Capital",
+			"multisigTx": "0x15bc24727286011371a80bd7011ee0773f8689642079b75fcbbebd69daddd139",
+			"entities": [{}]
+		},
+		{
+			"id": 219,
+			"desc": "Prefunding transfer provisioning for payments to Autark Flock team as per AGP-19",
+			"multisigTx": "0x2ed34aee990cf161ded7a71b340f9f3ab1e24c01c5ca9d655d027e36e25d4d22",
+			"entities": [{}]
+		},
+		{
+			"id": 218 ,
+			"desc": "Aragon One funding as per AGP-5",
+			"multisigTx": "0x0ee37f368b1253fb89f4b273badee465d540b50f90ea72ba6444b69d4bc1bb6d",
+			"entities": [{}]
+		},
+
 		{
 			"id": 198,
 			"desc": "Move OMG for safekeeping",
