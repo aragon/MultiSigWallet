@@ -4,7 +4,7 @@ body {
   font-weight: normal;
   font-size: 15px;
   background-color: white;
-  font-family: 'HKGrotesk-Regular', 'Maison Neue', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+  font-family: 'HKGrotesk-Regular', sans-serif !important;
 }
 
 ul, ol {
