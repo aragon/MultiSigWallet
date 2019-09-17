@@ -23,9 +23,6 @@
 
       const hardCodedAddress = "0xcafe1a77e84698c83ca8931f54a755176ef75f2c";
 
-      // This is to be manually updated
-      const ethBalanceInCDP = '40000';
-
       $scope.isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
       $scope.$watch(
@@ -154,11 +151,7 @@
             function (e, balance) {
               if(!e && balance) {
                 $scope.$apply(function () {
-                  const ethBalanceInCDPBN = new Web3().toWei(ethBalanceInCDP);
-                  const balanceWithCDP = balance.plus(ethBalanceInCDPBN);
-
-                  $scope.balance = balanceWithCDP;
-
+                  $scope.balance = balance;
 
                   $http.get('https://api.coinmarketcap.com/v1/ticker/ethereum/')
                   .success(function(data, status, headers, config) {
