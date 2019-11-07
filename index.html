@@ -16,6 +16,11 @@
     <link href="./bower_components/SpinKit/css/spinkit.css" rel="stylesheet" type="text/css" />
     <link href="./css/app.css" rel="stylesheet" type="text/css" />
     <link href="./css/aragon.css" rel="stylesheet" type="text/css" />
+    <!-- Hilarious hack to get rid of any injected Web3s -->
+    <!-- The injected web3 takes priority over the version this frontend depends on :( -->
+    <script>
+      delete window.Web3
+    </script>
     <!-- 3rd party Script -->
     <script src="./bower_components/angular/angular.min.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
