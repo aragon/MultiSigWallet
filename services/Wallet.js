@@ -12,20 +12,24 @@
           "name": "Multisig",
           "owners": {
             "0x4838eab6f43841e0d233db4cea47bd64f614f0c5": {
-              "name": "Jorge Izquierdo",
+              "name": "Jorge Izquierdo (Old)",
               "address": "0x4838eab6f43841e0d233db4cea47bd64f614f0c5"
-            },
-            "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": {
-              "name": "Luis Cuende",
-              "address": "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265"
             },
             "0xf0a5486944d315e05dd24a3c106b95d12a105650": {
               "name": "Jorge Izquierdo",
               "address": "0xf0a5486944d315e05dd24a3c106b95d12a105650"
             },
+            "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265": {
+              "name": "Luis Cuende (Old Old)",
+              "address": "0xddc1b51b67dabd408b224d0f7dfcc93ec4b06265"
+            },
             "0x370528520edf34361e205bb51b4f024bd0da1352": {
-              "name": "Luis Cuende",
+              "name": "Luis Cuende (Old)",
               "address": "0x370528520edf34361e205bb51b4f024bd0da1352"
+            },
+            "0xa5f91734f0966ba47a16b0392b71a6218fcb0835": {
+              "name": "Luis Cuende",
+              "address": "0xa5f91734f0966ba47a16b0392b71a6218fcb0835"
             },
             "0xbeefbeef03c7e5a1c29e0aa675f8e16aee0a5fad": {
               "name": "Community Multisig",
@@ -45,7 +49,7 @@
             }
           }
         }
-      }`)
+      }`);
 
       var wallet = {
         wallets: JSON.parse(localStorage.getItem("wallets")),
